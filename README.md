@@ -14,6 +14,8 @@ TESTED ON KALI LINUX, PARROT SEC OS, ARC LINUX
 git clone https://github.com/robin113x/macspoof
 
 cd macspoof
+
+
 python macspoof.py
 
 
