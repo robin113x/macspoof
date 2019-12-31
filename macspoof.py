@@ -1,10 +1,10 @@
 #!/usr/bin/evn python
-import pyfiglet
+#import pyfiglet
 import subprocess
 import optparse
 parse = optparse.OptionParser()
-b_b = pyfiglet.figlet_format("\nMAC  CHANGER")
-print(b_b)
+#b_b = pyfiglet.figlet_format("\nMAC  CHANGER")
+#print(b_b)
 print("\t\t\t\t\t\t\t\t-Robin\n")
 face = raw_input("\nEnter the Network Interface(wlan0/eth0) = ")
 if not face:
@@ -16,7 +16,7 @@ print("\n************************************************************")
 print("MAC Address of network interface " + face + "change to " + mc)
 print("************************************************************\n")
 subprocess.call(["ifconfig", face, "down"])
-subprocess.call(["ifconfig", face, "ether", "hw", mc])
+subprocess.call(["ifconfig", face, "hw", "ether", mc])
 subprocess.call(["ifconfig", face, "up"])
 subprocess.call(["ifconfig", face])
 
